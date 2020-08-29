@@ -1,7 +1,7 @@
-import React,{useState,useEffect,Component} from 'react';
+import React,{useState,useEffect} from 'react';
 import Forecast from './Forecast'
 import { Text, StyleSheet,ImageBackground } from 'react-native';
-import Constants from 'expo-constants';
+
 
 
 export default function Weather(props) {
@@ -45,9 +45,9 @@ export default function Weather(props) {
 }
        const styles = StyleSheet.create({
         backdrop: {
-        alignItems: 'center',
-        width: '100%',
-        height: '100%'
+            flexDirection : 'column',
+            width : '100%',
+            height : '100%',
         },
         title:{
             textAlign : 'center',

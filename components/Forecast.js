@@ -20,7 +20,7 @@ export default function Forecast(props) {
     title:{
       textAlign : 'center',
       textAlignVertical: 'center',
-      color: "red",
+      color: "white",
       fontSize: 30,
       fontWeight: "bold"
   },
