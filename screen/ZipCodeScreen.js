@@ -28,7 +28,9 @@ export default function ZipCodeScreen(){
     const image =  require('./b.jpg');
     return(
         <View style={styles.backdrop}>
+             
         <ImageBackground source = {image} style={styles.backdrop}>
+        <Text style = {styles.title}>Choose your Zip code </Text>
              <FlatList 
             data ={availableZipItems}
             keyExtractor ={item => item.code}
@@ -44,11 +46,14 @@ const styles = StyleSheet.create({
         flexDirection : 'column',
         width : '100%',
         height : '100%',
+        
     },
     zipItem :{
         flex : 1,
         flexDirection:'row',
         justifyContent:'space-evenly',
+        alignItems: 'flex-end',
+        
 
         width : '100%',
         height : '100%',
@@ -58,5 +63,12 @@ const styles = StyleSheet.create({
     },
     zipCode :{
         flex : 1,
-    }
+    },
+    title:{
+        textAlign : 'center',
+        textAlignVertical: 'center',
+        color: "blue",
+        fontSize: 30,
+        fontWeight: "bold"
+    },
 })

@@ -15,7 +15,7 @@ export default function Weather(props) {
         humidity: 0,
         feellike: 0
         })
-        
+
         useEffect(() => {
             console.log(`fetching data with zipCode = ${props.zipCode}`)
             if (props.zipCode) {
