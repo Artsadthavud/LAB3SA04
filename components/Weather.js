@@ -10,6 +10,8 @@ export default function Weather(props) {
         main: 'No data',
         description: 'No data',
         temp: 0,
+        tempMax: 0,
+        tempMin: 0,
         humidity: 0
         })
         
@@ -23,6 +25,8 @@ export default function Weather(props) {
                     main: json.weather[0].main,
                     description: json.weather[0].description,
                     temp: json.main.temp,
+                    tempMax: json.main.temp_max,
+                    temp_min: json.main.temp_min,
                     humidity: json.main.humidity,
                 });
             })
