@@ -12,7 +12,8 @@ export default function Weather(props) {
         temp: 0,
         tempMax: 0,
         tempMin: 0,
-        humidity: 0
+        humidity: 0,
+        feellike: 0
         })
         
         useEffect(() => {
@@ -28,6 +29,7 @@ export default function Weather(props) {
                     tempMax: json.main.temp_max,
                     temp_min: json.main.temp_min,
                     humidity: json.main.humidity,
+                    feellike: json.main.feels_like,
                 });
             })
             .catch((error) => {

@@ -12,9 +12,8 @@ export default function Forecast(props) {
     <View>
     </View>
     <Text style={styles.base} >humidity {props.humidity} </Text>
-    <Text style={styles.tempMin} > tempMin {props.temp_min} °C </Text>
-    <Text style={styles.tempp} > current {props.temp} °C</Text>
-    <Text style={styles.tempMax} >tempMax {props.temp_min} °C </Text>
+    <Text style={styles.tempp} > current {props.temp} °C feel like {props.feellike} °C</Text>
+    <Text style={styles.tempMax} > tempMin {props.temp_min} °C   tempMax {props.temp_min} °C </Text>
     </View>
     );
    }
