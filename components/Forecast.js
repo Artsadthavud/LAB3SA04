@@ -1,29 +1,41 @@
 import React from 'react';
-import { Text, View, StyleSheet, ColorPropType } from 'react-native';
+import { Text, View, StyleSheet} from 'react-native';
 
 export default function Forecast(props) {
     return (
     <View >
            
-    <Text style={styles.baseText} >{props.main}</Text>
+    <Text style={styles.base} >{props.main}</Text>
     
-    <Text style={styles.titleText}>{props.description}</Text>
+    <Text style={styles.title}>{props.description}</Text>
     <View>
-    
-    <Text style={styles.baseText} >{props.temp} °C</Text>
+    <Text style={styles.tempp} >{props.temp} °C</Text>
     </View>
     </View>
     );
    }
 
    const styles = StyleSheet.create({
-    baseText: {
-      fontFamily: "Cochin",
-      color: 'red'
-    },
-    titleText: {
+    
+    title:{
+      textAlign : 'center',
+      textAlignVertical: 'center',
+      color: "red",
+      fontSize: 30,
+      fontWeight: "bold"
+  },
+    base:{
+      textAlign : 'center',
+      textAlignVertical: 'auto',
+      color: "white",
+      fontSize: 15,
+      fontWeight: "bold"
+  },
+    tempp:{
+      textAlign : 'center',
+      textAlignVertical: 'auto',
+      color: "white",
       fontSize: 20,
-      fontWeight: "bold",
-      color: 'red'
-    }
+      fontWeight: "bold"
+}
   });
