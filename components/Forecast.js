@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet} from 'react-native';
 
 export default function Forecast(props) {
+
     return (
     <View >
            
@@ -11,6 +12,9 @@ export default function Forecast(props) {
     <View>
     <Text style={styles.tempp} >{props.temp} °C</Text>
     </View>
+    <Text style={styles.base} >humidity {props.humidity} </Text>
+    <Text style={styles.tempMin} > tempMin {props.humidity} </Text>
+    <Text style={styles.tempMax} >tempMax {props.humidity} </Text>
     </View>
     );
    }
@@ -37,5 +41,19 @@ export default function Forecast(props) {
       color: "white",
       fontSize: 20,
       fontWeight: "bold"
+},
+tempMin:{
+  textAlign : 'center',
+  textAlignVertical: 'auto',
+  color: "white",
+  fontSize: 20,
+  fontWeight: "bold"
+},
+tempMax:{
+  textAlign : 'center',
+  textAlignVertical: 'auto',
+  color: "white",
+  fontSize: 20,
+  fontWeight: "bold"
 }
   });
