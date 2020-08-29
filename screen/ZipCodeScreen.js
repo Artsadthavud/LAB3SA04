@@ -9,8 +9,14 @@ const availableZipItems = [
     { place: 'Chiangmai', code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
-    { place: 'Newyork' , code: '10001'},
+ 
+]
 
+
+const unavailableZipItems = [
+    { place: 'Newyork' , code: '10001'},
+    { place: 'Alaska' , code: '99501'},
+    { place: 'Florida' , code: '33124 '},
 ]
    
 const ZipItem = ({place,code,navigation}) => (
@@ -36,6 +42,14 @@ export default function ZipCodeScreen(){
             keyExtractor ={item => item.code}
             renderItem = {({item}) => < ZipItem {...item} navigation={navigation}/>}
         />
+
+        <Text style = {styles.title}>unavailable Zip code </Text>
+             <FlatList 
+            data ={unavailableZipItems}
+            keyExtractor ={item => item.code}
+            renderItem = {({item}) => < ZipItem {...item} navigation={navigation}/>}
+        />
+
   </ImageBackground>
   </View>
        
